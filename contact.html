@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Request a Free Quote | JSK Cleaning</title>
+    <meta name="description" content="Request a free cleaning quote from JSK Cleaning. Fill out the form in about five minutes, or text us. Available 24/7 across Toronto and the GTA.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preload" href="assets/fonts/open-sans-condensed-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script>document.documentElement.classList.add("js");</script>
+    <script src="assets/js/contact-form.js" defer></script>
+  </head>
+  <body>
+    <div class="page">
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-logo" href="index.html"><img src="assets/img/logo.svg" alt="JSK Cleaning home" width="188" height="35"></a>
+        <nav class="site-nav" aria-label="Main">
+          <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="residential.html">Residential</a></li>
+          <li><a class="site-nav__link" href="commercial.html">Commercial</a></li>
+          <li><a class="site-nav__link" href="forensic.html">Forensic</a></li>
+          <li><a class="site-nav__link" href="contact.html" aria-current="page">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <section class="hero hero--contact">
+        <div class="hero__inner">
+          <div class="hero__content">
+            <h1 class="hero-title">Fill Out This Form in Only 5 Minutes! Or Text Us!</h1>
+            <p class="lead">We are available 24/7.</p>
+            <p class="lead">Just provide this information we need to fulfill all your cleaning needs!</p>
+          </div>
+          <div class="hero__art"><img src="assets/img/illustrations/contact-hero.webp" alt="" width="280" height="245"></div>
+        </div>
+      </section>
+
+      <section class="quote" aria-label="Quote request">
+        <!--
+          Where submissions go: set data-endpoint to a form service URL (Formspree, Netlify Forms, Basin, ...).
+          While it is empty, the form opens the visitor's email app with the request filled in, addressed to jskservicecompany@gmail.com.
+        -->
+        <form class="quote-form" id="quote-form" action="mailto:jskservicecompany@gmail.com" method="post" enctype="text/plain" novalidate data-endpoint="" data-email="jskservicecompany@gmail.com">
+          <div class="form-grid">
+            <div class="field">
+              <label class="visually-hidden" for="first-name">First name (required)</label>
+              <input class="input" id="first-name" name="first_name" type="text" placeholder="First Name" autocomplete="given-name" required aria-required="true" aria-describedby="first-name-error">
+              <p class="field__error" id="first-name-error"></p>
+            </div>
+            <div class="field">
+              <label class="visually-hidden" for="last-name">Last name</label>
+              <input class="input" id="last-name" name="last_name" type="text" placeholder="Last Name" autocomplete="family-name" aria-describedby="last-name-error">
+              <p class="field__error" id="last-name-error"></p>
+            </div>
+            <div class="field field--full">
+              <label class="visually-hidden" for="email">Email address (required)</label>
+              <input class="input" id="email" name="email" type="email" placeholder="Email Address" autocomplete="email" required aria-required="true" aria-describedby="email-error">
+              <p class="field__error" id="email-error"></p>
+            </div>
+            <div class="field field--full">
+              <label class="visually-hidden" for="phone">Phone number (required)</label>
+              <input class="input" id="phone" name="phone" type="tel" placeholder="Phone Number" autocomplete="tel" required aria-required="true" inputmode="tel" aria-describedby="phone-error">
+              <p class="field__error" id="phone-error"></p>
+            </div>
+            <div class="field">
+              <label class="visually-hidden" for="property-type">Property type</label>
+              <select class="input" id="property-type" name="property_type" aria-describedby="property-type-error">
+                <option value="" disabled selected>Property Type</option>
+                <option>House</option>
+                <option>Condo or apartment</option>
+                <option>Townhouse</option>
+                <option>Office</option>
+                <option>Retail or restaurant</option>
+                <option>Healthcare or clinic</option>
+                <option>School or campus</option>
+                <option>Hotel</option>
+                <option>Industrial or warehouse</option>
+                <option>Other</option>
+              </select>
+              <p class="field__error" id="property-type-error"></p>
+            </div>
+            <div class="field">
+              <label class="visually-hidden" for="service">Cleaning service (required)</label>
+              <select class="input" id="service" name="service" required aria-required="true" aria-describedby="service-error">
+                <option value="" disabled selected>Cleaning Services</option>
+                <optgroup label="Residential"><option>Routine cleaning</option><option>Deep cleaning</option><option>Move in/out cleaning</option></optgroup>
+                <optgroup label="Commercial"><option>Janitorial cleaning</option><option>Disinfection + sanitization</option><option>Post-construction cleaning</option><option>Specialty cleaning</option><option>Floor care</option><option>Green cleaning</option></optgroup>
+                <optgroup label="Forensic &amp; trauma"><option>Post-mortem cleaning</option><option>Biohazard cleaning</option><option>Hoarding cleaning</option><option>Distressed property cleaning</option><option>Foreclosure &amp; estate cleaning</option><option>Grow house &amp; drug lab cleaning</option></optgroup>
+                <option>Not sure / something else</option>
+              </select>
+              <p class="field__error" id="service-error"></p>
+            </div>
+            <div class="field field--full field--date">
+              <label class="visually-hidden" for="date">Preferred date</label>
+              <input class="input" id="date" name="preferred_date" type="date" autocomplete="off" aria-describedby="date-error">
+              <span class="field__overlay" aria-hidden="true">Preferred Date</span>
+              <p class="field__error" id="date-error"></p>
+            </div>
+            <div class="field">
+              <label class="visually-hidden" for="rooms">Number of rooms</label>
+              <select class="input" id="rooms" name="rooms" aria-describedby="rooms-error">
+                <option value="" disabled selected>Number of Rooms</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6 or more</option>
+                <option>Not sure</option>
+              </select>
+              <p class="field__error" id="rooms-error"></p>
+            </div>
+            <div class="field">
+              <label class="visually-hidden" for="sqft">Square footage</label>
+              <select class="input" id="sqft" name="square_footage" aria-describedby="sqft-error">
+                <option value="" disabled selected>Square Footage</option>
+                <option>Under 500 sq ft</option>
+                <option>500&ndash;999 sq ft</option>
+                <option>1,000&ndash;1,499 sq ft</option>
+                <option>1,500&ndash;1,999 sq ft</option>
+                <option>2,000&ndash;2,999 sq ft</option>
+                <option>3,000&ndash;4,999 sq ft</option>
+                <option>5,000+ sq ft</option>
+                <option>Not sure</option>
+              </select>
+              <p class="field__error" id="sqft-error"></p>
+            </div>
+            <div class="field field--full">
+              <label class="visually-hidden" for="description">Short description of the job</label>
+              <textarea class="input" id="description" name="description" rows="3" maxlength="500" placeholder="Short description (max 500 characters)" aria-describedby="description-error description-count"></textarea>
+              <p class="field__meta"><span id="description-count" aria-live="polite">0 / 500</span></p>
+              <p class="field__error" id="description-error"></p>
+            </div>
+            <div class="field field--full">
+              <input class="visually-hidden upload-input" id="photos" name="photos" type="file" accept="image/*" multiple aria-describedby="photos-error photos-list">
+              <label class="upload" for="photos"><svg viewBox="0 -960 960 960" aria-hidden="true" focusable="false"><path d="M440-440H240q-17 0-28.5-11.5T200-480q0-17 11.5-28.5T240-520h200v-200q0-17 11.5-28.5T480-760q17 0 28.5 11.5T520-720v200h200q17 0 28.5 11.5T760-480q0 17-11.5 28.5T720-440H520v200q0 17-11.5 28.5T480-200q-17 0-28.5-11.5T440-240v-200Z"/></svg><span>Upload Photo</span></label>
+              <div class="upload-files" id="photos-list" aria-live="polite"></div>
+              <p class="field__error" id="photos-error"></p>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn--primary" type="submit">Submit</button>
+          </div>
+          <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+        </form>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div>
+          <a class="site-footer__brand" href="index.html"><img src="assets/img/logo-mark.svg" alt="" width="56" height="26">JSK Cleaning</a>
+          <p class="site-footer__tagline">Residential, commercial, and trauma cleaning across Toronto and the GTA.</p>
+        </div>
+        <nav class="site-footer__cols" aria-label="Footer">
+          <ul class="site-footer__list">
+            <li><a href="residential.html">Residential</a></li>
+            <li><a href="commercial.html">Commercial</a></li>
+            <li><a href="forensic.html">Forensic &amp; Trauma</a></li>
+          </ul>
+          <ul class="site-footer__list">
+            <li><a href="mailto:jskservicecompany@gmail.com">jskservicecompany@gmail.com</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+    </div>
+  </body>
+</html>

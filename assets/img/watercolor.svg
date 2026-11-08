@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="640" viewBox="0 0 640 640">
+  <!-- Tileable pale-blue watercolour texture for the "plan" / "certified" sections.
+       Approximates the texture in the design screenshots; swap for the original if you have it. -->
+  <filter id="w" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+    <feTurbulence type="turbulence" baseFrequency="0.018 0.026" numOctaves="5" seed="8" stitchTiles="stitch" result="n"/>
+    <!-- map noise to a narrow band around #E3EFFA (sampled from the design) -->
+    <feColorMatrix in="n" type="matrix"
+      values="0.13 0 0 0 0.855
+              0.08 0 0 0 0.915
+              0.03 0 0 0 0.968
+              0    0 0 0 1"/>
+  </filter>
+  <rect width="640" height="640" filter="url(#w)"/>
+</svg>
