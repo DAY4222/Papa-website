@@ -44,7 +44,8 @@
           Where submissions go: set data-endpoint to a form service URL (Formspree, Netlify Forms, Basin, ...).
           While it is empty, the form opens the visitor's email app with the request filled in, addressed to jskservicecompany@gmail.com.
         -->
-        <form class="quote-form" id="quote-form" action="mailto:jskservicecompany@gmail.com" method="post" enctype="text/plain" novalidate data-endpoint="" data-email="jskservicecompany@gmail.com">
+        <form class="quote-form" id="quote-form" novalidate data-endpoint="" data-email="jskservicecompany@gmail.com">
+          <noscript><p class="form-status form-status--info">This form needs JavaScript. You can also email your request to <a href="mailto:jskservicecompany@gmail.com">jskservicecompany@gmail.com</a>.</p></noscript>
           <div class="form-grid">
             <div class="field">
               <label class="visually-hidden" for="first-name">First name (required)</label>
